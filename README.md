@@ -2,7 +2,7 @@
 # Here we go!
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/project/cli`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+Project_cli will help you find the perfect recipe for your occasion. 
 
 ## Installation
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You will be prompted to select a occasion and a list of recipes will be presented. Select a recipe and get cooking!
 
 ## Development
 
