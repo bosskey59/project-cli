@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require "./lib/project"
+require "./lib/enviorment"
 
 #cli controller
