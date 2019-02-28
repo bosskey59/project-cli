@@ -1,5 +1,9 @@
 require "open-uri"
 
 class Scraper
-  doc = Nokogiri::HTML(open("http://www.spoonforkbacon.com/"))
+  attr_accessor :name, :designation_type, :year_designated, :url 
+
+def cheese_scraper
+  doc = Nokogiri::HTML(open("https://en.wikipedia.org/wiki/List_of_European_cheeses_with_protected_geographical_status#Netherlands"))
+  end
 end
