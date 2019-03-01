@@ -8,7 +8,7 @@ class Scraper
     @@cheeses = []
     
     @@cheeses << cheese_scraper
-    
+    binding.pry
   end
   
 
@@ -29,7 +29,7 @@ class Scraper
     i += 1
     end
     @@cheeses
-    binding.pry
+    #binding.pry
      end
   end
 
