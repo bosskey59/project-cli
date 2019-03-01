@@ -8,22 +8,26 @@ class Scraper
     cheeses = []
     
     cheeses << self.cheese_scraper
+    binding.pry
   end
   
 
   def cheese_scraper
     doc = Nokogiri::HTML(open("https://en.wikipedia.org/wiki/List_of_European_cheeses_with_protected_geographical_status#Netherlands"))
     dutch_cheese = doc.css("table")[9]
-    first_cheese = dutch_cheese.css("tr")[2]
+    i = 1
+    while i < dutch_cheese.css("tr").size
+    first_cheese = dutch_cheese.css("tr")[i]
     
-    cheese = self.new
+    cheese = Scraper.new
     cheese.url = "https://en.wikipedia.org"+(first_cheese.css("a").attribute("href").value)
     cheese.name = first_cheese.css("a").attribute("title").value
     cheese.place_of_origin = first_cheese.css("a").text
-    
+    i += 1
+    end
     cheese
-    binding.pry
+   # binding.pry
     end
   end
 
-Scraper.new.cheese_scraper
+Scraper.new.cheese_array
