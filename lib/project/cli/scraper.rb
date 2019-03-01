@@ -10,7 +10,10 @@ class Scraper
     dutch_cheese = doc.css("table")[9]
     first_cheese = dutch_cheese.css("tr")[1]
     the_big_cheese = first_cheese.xpath("//a")
-    binding.pry
+        the_big_cheese.each do |tag|
+      puts "#{a[:href]}\t#{tag.text}"
+      binding.pry
+    end
   end
 end
 Scraper.new.cheese_scraper
