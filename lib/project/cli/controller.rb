@@ -32,14 +32,19 @@ end
     puts "if you would like to learn more about a specific cheese please type that number."
     puts "if you would like to exit type 'exit'."
    # binding.pry
+   loop do
     input = gets.strip.downcase
     
     if input == 'exit' 
       good_bye
+      break
     elsif input == "order cheese" 
-      'open http://amsterdamcheesecompany.com/'
+   puts "Connecting you with the Amsterdam Cheese Company."   #'open http://amsterdamcheesecompany.com/'
+    else
+      puts "Please enter valid input"
     end 
   end
+end
   
   def good_bye
     puts "Vaarwel!"
