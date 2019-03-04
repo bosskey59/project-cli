@@ -12,7 +12,7 @@ class Controller
     
     #case 
     #when "list cheeses"
-      list_cheese
+      #list_cheese
    #end   
   end
   
@@ -20,8 +20,9 @@ class Controller
      Scraper.all.each.with_index(1) do |chz, i|
      puts "#{i}. #{chz.name}"
      binding.pry
+    end
+   
   end
-end
 end
 
 Controller.new.list_cheeses
