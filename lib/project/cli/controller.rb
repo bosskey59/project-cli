@@ -5,6 +5,7 @@ class Controller
   def call
     puts "So I hear you like cheese."
     puts "If you would like to see a list of protected Dutch cheeses type 'list cheeses'. "
+    puts "If you would like to exit type 'exit'."
     
     
     
@@ -14,6 +15,10 @@ class Controller
     case 
     when "list cheeses"
       list_cheeses
+    when "exit"
+      good_bye
+    else 
+      puts "invalid input please type 'exit' or 'list cheeses'."
    end   
   end
   
