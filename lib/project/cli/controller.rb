@@ -26,6 +26,14 @@ class Controller
     puts "if you would like to learn more about a specific cheese please type that number."
     puts "if you would like to exit type 'exit'."
     
+    input = gets.strip.downcase
+    
+    case 
+    when "exit"
+      good_bye
+    when "order cheese" 
+      open http://amsterdamcheesecompany.com/
+    end 
   end
   
   def good_bye
