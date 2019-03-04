@@ -40,11 +40,13 @@ end
       break
     elsif input == "order cheese" 
    puts "Connecting you with the Amsterdam Cheese Company."   #'open http://amsterdamcheesecompany.com/'
+   break
    elsif input.to_i <= Scraper.all.length && input.to_i > 0 
    i = input.to_i - 1 
    url = Scraper.all[i].url
    puts "we are connecting you to #{url}."   #'open #{url}'
-   binding.pry
+   break
+   #binding.pry
     else
       puts "Please enter valid input"
     end 
@@ -55,4 +57,4 @@ end
     puts "Vaarwel!"
   end
 end
-Controller.new.list_cheeses
+Controller.new.call
