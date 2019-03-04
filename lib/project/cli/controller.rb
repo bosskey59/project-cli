@@ -12,10 +12,9 @@ class Controller
     
     input = gets.strip.downcase
     
-    case 
-    when "list cheeses"
+    if input == "list cheeses"
       list_cheeses
-    when "exit"
+    elsif == "exit"
       good_bye
     else 
       puts "invalid input please type 'exit' or 'list cheeses'."
@@ -33,10 +32,9 @@ class Controller
    # binding.pry
     input = gets.strip.downcase
     
-    case 
-    when "exit"
+    if input == 'exit' 
       good_bye
-    when "order cheese" 
+    elsif input == "order cheese" 
       'open http://amsterdamcheesecompany.com/'
     end 
   end
