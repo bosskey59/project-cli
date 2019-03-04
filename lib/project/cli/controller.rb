@@ -19,7 +19,7 @@ class Controller
   
   def list_cheeses
      Scraper.all.each.with_index(1) do |chz, i|
-     puts "#{i}. #{chz.name}"
+     puts "#{i}. #{chz.name} from #{chz.place_of_origin}."
      #binding.pry
     end
     puts "If you would like to order Dutch cheese type 'order cheese'. "
