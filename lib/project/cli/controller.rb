@@ -43,6 +43,8 @@ end
    elsif input.to_i <= Scraper.all.length && input.to_i > 0 
    i = input.to_i - 1 
    url = Scraper.all[i].url
+   puts "we are connecting you to #{url}."   #'open #{url}'
+   binding.pry
     else
       puts "Please enter valid input"
     end 
@@ -53,4 +55,4 @@ end
     puts "Vaarwel!"
   end
 end
-Controller.new.call
+Controller.new.list_cheeses
