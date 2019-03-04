@@ -1,5 +1,5 @@
-#require_relative ".lib/project/cli/scraper.rb"
-#require "pry"
+require_relative "./scraper.rb"
+require "pry"
 class Controller
   
   def call
@@ -8,12 +8,13 @@ class Controller
     
     
     
+    
     input = gets.strip.downcase
     
-    #case 
-    #when "list cheeses"
-      #list_cheese
-   #end   
+    case 
+    when "list cheeses"
+      list_cheese
+   end   
   end
   
   def list_cheeses
@@ -21,7 +22,14 @@ class Controller
      puts "#{i}. #{chz.name}"
      binding.pry
     end
-   
+    puts "If you would like to order Dutch cheese type 'order cheese'. "
+    puts "if you would like to learn more about a specific cheese please type that number."
+    puts "if you would like to exit type 'exit'."
+    
+  end
+  
+  def good_bye
+    puts "Vaarwel!"
   end
 end
 

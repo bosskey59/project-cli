@@ -4,7 +4,7 @@ require 'pry'
 class Scraper
   attr_accessor :name, :url, :place_of_origin
   
-  def all
+  def self.all
     @@cheeses
   end
   
