@@ -1,5 +1,5 @@
-require_relative ".lib/project/cli/scraper.rb"
-
+#require_relative ".lib/project/cli/scraper.rb"
+#require "pry"
 class Controller
   
   def call
@@ -10,15 +10,18 @@ class Controller
     
     input = gets.strip.downcase
     
-    case 
-    when "list cheeses"
+    #case 
+    #when "list cheeses"
       list_cheese
-      
+   #end   
   end
   
   def list_cheeses
      Scraper.all.each.with_index(1) do |chz, i|
      puts "#{i}. #{chz.name}"
-  end
+     binding.pry
   end
 end
+end
+
+Controller.new.list_cheeses
