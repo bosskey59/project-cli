@@ -4,6 +4,10 @@ require 'pry'
 class Scraper
   attr_accessor :name, :url, :place_of_origin
   
+  def all
+    @@cheeses
+  end
+  
   def cheese_array
     @@cheeses = []
     
