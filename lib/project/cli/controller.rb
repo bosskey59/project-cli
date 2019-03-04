@@ -9,17 +9,19 @@ class Controller
     
     
     
-    
+  loop do  
     input = gets.strip.downcase
     
     if input == "list cheeses"
       list_cheeses
-    elsif == "exit"
+    elsif input == "exit"
       good_bye
+      break
     else 
       puts "invalid input please type 'exit' or 'list cheeses'."
    end   
   end
+end
   
   def list_cheeses
      Scraper.all.each.with_index(1) do |chz, i|
