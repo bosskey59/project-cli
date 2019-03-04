@@ -13,26 +13,26 @@ class Controller
     
     case 
     when "list cheeses"
-      list_cheese
+      list_cheeses
    end   
   end
   
   def list_cheeses
      Scraper.all.each.with_index(1) do |chz, i|
-     puts "#{i}. #{chz.name} from #{chz.place_of_origin}."
+     puts "#{i}. #{chz.name} from: #{chz.place_of_origin}."
      #binding.pry
     end
     puts "If you would like to order Dutch cheese type 'order cheese'. "
     puts "if you would like to learn more about a specific cheese please type that number."
     puts "if you would like to exit type 'exit'."
-    binding.pry
+   # binding.pry
     input = gets.strip.downcase
     
     case 
     when "exit"
       good_bye
     when "order cheese" 
-      "open http://amsterdamcheesecompany.com/"
+      'open http://amsterdamcheesecompany.com/'
     end 
   end
   
@@ -40,4 +40,4 @@ class Controller
     puts "Vaarwel!"
   end
 end
-Controller.new.list_cheeses
+Controller.new.call
