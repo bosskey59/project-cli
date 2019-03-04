@@ -40,6 +40,9 @@ end
       break
     elsif input == "order cheese" 
    puts "Connecting you with the Amsterdam Cheese Company."   #'open http://amsterdamcheesecompany.com/'
+   elsif input.to_i <= Scraper.all.length && input.to_i > 0 
+   i = input.to_i - 1 
+   url = Scraper.all[i].url
     else
       puts "Please enter valid input"
     end 
