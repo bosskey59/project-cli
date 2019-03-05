@@ -3,7 +3,6 @@ require "pry"
 class Controller
   
   def call
-   # loop do
     puts "So I hear you like cheese."
     puts "If you would like to see a list of protected Dutch cheeses type 'list cheeses'. "
     puts "If you would like to exit type 'exit'."
@@ -28,12 +27,12 @@ end
   def list_cheeses
      Scraper.all.each.with_index(1) do |chz, i|
      puts "#{i}. #{chz.name} from: #{chz.place_of_origin}."
-     #binding.pry
+    
     end
     puts "If you would like to order Dutch cheese type 'order cheese'. "
     puts "If you would like to learn more about a specific cheese please type that number."
     puts "If you would like to exit type 'exit'."
-   # binding.pry
+  
    loop do
     input = gets.strip.downcase
     
@@ -48,7 +47,7 @@ end
    url = Scraper.all[i].url
    puts "We are connecting you to #{url}."   #'open #{url}'
    break
-   #binding.pry
+  
     else
       puts "Please enter valid input"
     end
