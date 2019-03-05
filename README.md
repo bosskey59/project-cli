@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-You will be prompted to select a occasion and a list of recipes will be presented. Select a recipe and get cooking!
+So Gouda is designed to connect users to delicious dutch for purchase and help them become more informed on EU designations and cultural heritage.
 
 ## Development
 
