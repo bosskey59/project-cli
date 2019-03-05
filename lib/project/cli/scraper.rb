@@ -10,9 +10,7 @@ class Scraper
   
   def cheese_array
     @@cheeses = []
-    
     @@cheeses << cheese_scraper
-    #binding.pry
   end
   
 
@@ -33,8 +31,7 @@ class Scraper
     i += 1
     end
     @@cheeses
-    #binding.pry
      end
   end
 
-Scraper.new.cheese_array
+
