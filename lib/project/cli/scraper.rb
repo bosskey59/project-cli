@@ -35,3 +35,4 @@ class Scraper
   end
 
 
+Scraper.new.cheese_array
