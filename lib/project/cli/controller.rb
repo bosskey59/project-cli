@@ -6,9 +6,12 @@ class Controller
     puts "So I hear you like cheese."
     puts "If you would like to see a list of protected Dutch cheeses type 'list cheeses'. "
     puts "If you would like to exit type 'exit'."
+    Scraper.new.cheese_scraper
+    user_input
+  end
     
     
-    
+  def user_input  
   loop do  
     input = gets.strip.downcase
     
