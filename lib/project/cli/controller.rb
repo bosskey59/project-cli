@@ -43,13 +43,15 @@ end
       good_bye
       break
     elsif input == "order cheese" 
-   puts "Connecting you with the Amsterdam Cheese Company."   #'open http://amsterdamcheesecompany.com/'
-   break
+   puts "Connecting you with the Amsterdam Cheese Company." #'open http://amsterdamcheesecompany.com/'
+   puts "If you would learn more about another cheese please type in the coresponding number from the cheese list."
+   puts "If you would like to leave please type 'exit'."
    elsif input.to_i <= Scraper.all.length && input.to_i > 0 
    i = input.to_i - 1 
    url = Scraper.all[i].url
    puts "We are connecting you to #{url}."   #'open #{url}'
-   break
+   puts "If you would learn more about another cheese please type in the coresponding number from the cheese list."
+   puts "If you would like to leave please type 'exit'."
   
     else
       puts "Please enter valid input"
